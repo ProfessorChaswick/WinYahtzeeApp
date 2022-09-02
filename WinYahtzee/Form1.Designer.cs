@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnRoll = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.picDi5 = new System.Windows.Forms.PictureBox();
@@ -131,8 +132,10 @@
             this.Controls.Add(this.picDi5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRoll);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Yahtzee © Professor Chaswick";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDi5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi2)).EndInit();
