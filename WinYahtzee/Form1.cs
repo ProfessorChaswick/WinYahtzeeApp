@@ -11,33 +11,40 @@ namespace WinYahtzee
             InitializeComponent();
             
         }
+        //component arrays....
+        PictureBox[] showDice = new PictureBox[5]; //so dice pictures work in a loop
+        Button[] scoreButton = new Button[15];
+        Button[] holdButton = new Button[5]; //so I can reset all the hold buttons to green
+
 
         private async void btnRoll_Click(object sender, EventArgs e)
         {
-            int cube = Roll.rollEm();
-            label1.Text = cube.ToString();
+            int[] cubes = new int[5];
+
+            cubes[0] = Roll.rollEm();
+            label1.Text = cubes[0].ToString();
             picDi1.Image = Resource1.smDiceroll;
             await Task.Delay(1500);
             picDi1.Refresh();
-            switch (cube)
+            switch (cubes[0])
             {
                 case 1:
-                    picDi1.Image = Resource1.y1;
+                    showDice[0].Image = Resource1.y1;
                     break;
                 case 2:
-                    picDi1.Image = Resource1.y2;
+                    showDice[0].Image = Resource1.y2;
                     break;
                 case 3:
-                    picDi1.Image = Resource1.y3;
+                    showDice[0].Image = Resource1.y3;
                     break;
                 case 4:
-                    picDi1.Image = Resource1.y4;
+                    showDice[0].Image = Resource1.y4;
                     break;
                 case 5:
-                    picDi1.Image = Resource1.y5;
+                    showDice[0].Image = Resource1.y5;
                     break;
-                case 6: 
-                    picDi1.Image = Resource1.y6;
+                case 6:
+                    showDice[0].Image = Resource1.y6;
                     break;
             }
             
@@ -46,6 +53,11 @@ namespace WinYahtzee
         private void Form1_Load(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(picDi1, "Click to hold");
+            showDice[0] = picDi1; //build the pictureBox array to work in loops!
+            showDice[1] = picDi2;
+            showDice[2] = picDi3;
+            showDice[3] = picDi4;
+            showDice[4] = picDi5;
         }
     }
 }
