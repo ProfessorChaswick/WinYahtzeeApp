@@ -21,11 +21,8 @@ namespace WinYahtzee
         {
             int[] cubes = new int[5];
 
-            //cubes[0] = Roll.rollEm();
             //label1.Text = cubes[0].ToString();
-            //picDi1.Image = Resource1.smDiceroll;
-            //await Task.Delay(1500);
-            //picDi1.Refresh();
+
             for (int x = 0; x <= 4; x++)
             {
                 cubes[x] = Roll.rollEm();
@@ -55,7 +52,14 @@ namespace WinYahtzee
                 }
 
             }
-
+            // temp bits for testing
+            int rollTotal = 0;
+            foreach(int c in cubes)
+            {
+                rollTotal += c;
+            }
+            label1.Text = rollTotal.ToString();
+            // end test
         }
 
         private void Form1_Load(object sender, EventArgs e)
