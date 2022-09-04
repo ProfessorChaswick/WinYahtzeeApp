@@ -1,4 +1,5 @@
 using RollDice;
+using ScoreOnes;
 using System.Drawing;
 using System.Threading;
 
@@ -15,6 +16,7 @@ namespace WinYahtzee
         PictureBox[] showDice = new PictureBox[5]; //so dice pictures work in a loop
         Button[] scoreButton = new Button[15];
         Button[] holdButton = new Button[5]; //so I can reset all the hold buttons to green
+        Label[] scoreBox = new Label[18]; //so I can set all the score labels to blank.
 
 
         private async void btnRoll_Click(object sender, EventArgs e)
@@ -73,6 +75,7 @@ namespace WinYahtzee
 
         private void picDi1_MouseHover(object sender, EventArgs e)
         {
+            lblHoverTip.Text = "Click to Hold";
             lblHoverTip.Visible = true;
         }
 
@@ -80,6 +83,14 @@ namespace WinYahtzee
         {
             await Task.Delay(250);
             lblHoverTip.Visible=false;
+        }
+
+        private void scrBtnOne_Click(object sender, EventArgs e)
+        {
+            //int ones = Score1.ScoreOnes(),
+            lblOnes.Text = Score1.ScoreOnes().ToString();
+            scrBtnOne.BackColor = Color.LightSlateGray;
+            scrBtnOne.Enabled = false;
         }
     }
 }
