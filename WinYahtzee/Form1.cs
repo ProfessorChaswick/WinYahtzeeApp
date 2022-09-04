@@ -64,12 +64,22 @@ namespace WinYahtzee
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            toolTip1.SetToolTip(picDi1, "Click to hold");
             showDice[0] = picDi1; //build the pictureBox array to work in loops!
             showDice[1] = picDi2;
             showDice[2] = picDi3;
             showDice[3] = picDi4;
             showDice[4] = picDi5;
+        }
+
+        private void picDi1_MouseHover(object sender, EventArgs e)
+        {
+            lblHoverTip.Visible = true;
+        }
+
+        private async void picDi1_MouseLeave(object sender, EventArgs e)
+        {
+            await Task.Delay(250);
+            lblHoverTip.Visible=false;
         }
     }
 }

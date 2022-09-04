@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinYahtzee", "WinYahtzee\WinYahtzee.csproj", "{258276DB-4BDC-4E69-8910-481890BCEDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinYahtzee", "WinYahtzee\WinYahtzee.csproj", "{258276DB-4BDC-4E69-8910-481890BCEDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollDice", "RollDice\RollDice.csproj", "{EE5E7CA2-42A2-48FA-9463-842016F91B6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RollDice", "RollDice\RollDice.csproj", "{EE5E7CA2-42A2-48FA-9463-842016F91B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreOnes", "ScoreOnes\ScoreOnes.csproj", "{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreTwos", "ScoreTwos\ScoreTwos.csproj", "{0C469C4E-A945-462D-AB0B-758D4D6303D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreThrees", "ScoreThrees\ScoreThrees.csproj", "{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreFours", "ScoreFours\ScoreFours.csproj", "{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreFives", "ScoreFives\ScoreFives.csproj", "{5798AA8A-A833-4434-936A-364F28634F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreSixes", "ScoreSixes\ScoreSixes.csproj", "{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +33,30 @@ Global
 		{EE5E7CA2-42A2-48FA-9463-842016F91B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE5E7CA2-42A2-48FA-9463-842016F91B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE5E7CA2-42A2-48FA-9463-842016F91B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C469C4E-A945-462D-AB0B-758D4D6303D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C469C4E-A945-462D-AB0B-758D4D6303D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C469C4E-A945-462D-AB0B-758D4D6303D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C469C4E-A945-462D-AB0B-758D4D6303D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5798AA8A-A833-4434-936A-364F28634F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5798AA8A-A833-4434-936A-364F28634F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5798AA8A-A833-4434-936A-364F28634F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5798AA8A-A833-4434-936A-364F28634F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
