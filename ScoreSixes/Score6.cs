@@ -1,7 +1,6 @@
-﻿namespace ScoreSixes
-{
-    public class Score6
-    {
+﻿namespace ScoreSixes;
 
-    }
+public class Score6
+{
+
 }

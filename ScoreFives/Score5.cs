@@ -1,7 +1,6 @@
-﻿namespace ScoreFives
-{
-    public class Score5
-    {
+﻿namespace ScoreFives;
 
-    }
+public class Score5
+{
+
 }

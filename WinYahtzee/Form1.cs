@@ -1,5 +1,7 @@
 using RollDice;
 using ScoreOnes;
+using ScoreTwos;
+//using Tally;
 using System.Drawing;
 using System.Threading;
 
@@ -7,6 +9,8 @@ namespace WinYahtzee
 {
     public partial class Form1 : Form
     {
+        int[] cubes = new int[5];
+        static int TotalTop = 0;
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +25,7 @@ namespace WinYahtzee
 
         private async void btnRoll_Click(object sender, EventArgs e)
         {
-            int[] cubes = new int[5];
+            
 
             //label1.Text = cubes[0].ToString();
 
@@ -66,6 +70,8 @@ namespace WinYahtzee
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            TotalTop = 0;
+            lblTotalTop.Text = TotalTop.ToString();
             showDice[0] = picDi1; //build the pictureBox array to work in loops!
             showDice[1] = picDi2;
             showDice[2] = picDi3;
@@ -87,10 +93,26 @@ namespace WinYahtzee
 
         private void scrBtnOne_Click(object sender, EventArgs e)
         {
-            //int ones = Score1.ScoreOnes(),
-            lblOnes.Text = Score1.ScoreOnes().ToString();
+            int ones = Score1.AddOnes(cubes);
+            lblOnes.Text = ones.ToString();
+            lblTotalTop.Text = AddTop(ones).ToString();
             scrBtnOne.BackColor = Color.LightSlateGray;
             scrBtnOne.Enabled = false;
         }
+
+        private void ScrBtnTwo_Click(object sender, EventArgs e)
+        {
+            int twos = Score2.AddTwos(cubes);
+            lblTwos.Text = twos.ToString();
+            lblTotalTop.Text = AddTop(twos).ToString();
+            ScrBtnTwo.BackColor = Color.LightSlateGray;
+            ScrBtnTwo.Enabled = false;
+        }
+            public static int AddTop(int dots)
+            {
+                TotalTop += dots;
+                //Top += dots;int
+                return TotalTop;
+            }
     }
 }

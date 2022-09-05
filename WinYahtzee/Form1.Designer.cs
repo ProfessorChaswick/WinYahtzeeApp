@@ -670,6 +670,7 @@
             this.ScrBtnTwo.Size = new System.Drawing.Size(28, 28);
             this.ScrBtnTwo.TabIndex = 18;
             this.ScrBtnTwo.UseVisualStyleBackColor = false;
+            this.ScrBtnTwo.Click += new System.EventHandler(this.ScrBtnTwo_Click);
             // 
             // label18
             // 

@@ -1,7 +1,6 @@
-﻿namespace ScoreThrees
-{
-    public class Score3
-    {
+﻿namespace ScoreThrees;
 
-    }
+public class Score3
+{
+
 }
