@@ -1,7 +1,10 @@
 using RollDice;
 using ScoreOnes;
 using ScoreTwos;
-//using Tally;
+using ScoreThrees;
+using ScoreFours;
+using ScoreFives;
+using ScoreSixes;
 using System.Drawing;
 using System.Threading;
 
@@ -33,7 +36,7 @@ namespace WinYahtzee
             {
                 cubes[x] = Roll.rollEm();
                 showDice[x].Image = Resource1.smDiceroll;
-                await Task.Delay(333);
+                await Task.Delay(275);
                 showDice[x].Refresh();
                 switch (cubes[x])
                 {
@@ -114,5 +117,41 @@ namespace WinYahtzee
                 //Top += dots;int
                 return TotalTop;
             }
+
+        private void scrBtnThree_Click(object sender, EventArgs e)
+        {
+            int threes = Score3.AddThrees(cubes);
+            lblThrees.Text = threes.ToString();
+            lblTotalTop.Text = AddTop(threes).ToString();
+            scrBtnThree.BackColor = Color.LightSlateGray;
+            scrBtnThree.Enabled = false;
+        }
+
+        private void scrBtnFour_Click(object sender, EventArgs e)
+        {
+            int fours = Score4.AddFours(cubes);
+            lblFours.Text = fours.ToString();
+            lblTotalTop.Text = AddTop(fours).ToString();
+            scrBtnFour.BackColor = Color.LightSlateGray;
+            scrBtnFour.Enabled = false;
+        }
+
+        private void scrBtnFive_Click(object sender, EventArgs e)
+        {
+            int fives = Score5.AddFives(cubes);
+            lblFives.Text = fives.ToString();
+            lblTotalTop.Text = AddTop(fives).ToString();
+            scrBtnFive.BackColor = Color.LightSlateGray;
+            scrBtnFive.Enabled = false;
+        }
+
+        private void scrBtnSix_Click(object sender, EventArgs e)
+        {
+            int sixes = Score6.AddSixes(cubes);
+            lblSixes.Text = sixes.ToString();
+            lblTotalTop.Text= AddTop(sixes).ToString();
+            scrBtnSix.BackColor = Color.LightSlateGray;
+            scrBtnSix.Enabled = false;
+        }
     }
 }

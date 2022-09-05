@@ -614,6 +614,7 @@
             this.scrBtnSix.Size = new System.Drawing.Size(28, 28);
             this.scrBtnSix.TabIndex = 22;
             this.scrBtnSix.UseVisualStyleBackColor = false;
+            this.scrBtnSix.Click += new System.EventHandler(this.scrBtnSix_Click);
             // 
             // label13
             // 
@@ -637,6 +638,7 @@
             this.scrBtnFive.Size = new System.Drawing.Size(28, 28);
             this.scrBtnFive.TabIndex = 21;
             this.scrBtnFive.UseVisualStyleBackColor = false;
+            this.scrBtnFive.Click += new System.EventHandler(this.scrBtnFive_Click);
             // 
             // scrBtnFour
             // 
@@ -648,6 +650,7 @@
             this.scrBtnFour.Size = new System.Drawing.Size(28, 28);
             this.scrBtnFour.TabIndex = 20;
             this.scrBtnFour.UseVisualStyleBackColor = false;
+            this.scrBtnFour.Click += new System.EventHandler(this.scrBtnFour_Click);
             // 
             // scrBtnThree
             // 
@@ -659,6 +662,7 @@
             this.scrBtnThree.Size = new System.Drawing.Size(28, 28);
             this.scrBtnThree.TabIndex = 19;
             this.scrBtnThree.UseVisualStyleBackColor = false;
+            this.scrBtnThree.Click += new System.EventHandler(this.scrBtnThree_Click);
             // 
             // ScrBtnTwo
             // 
