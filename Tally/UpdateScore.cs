@@ -1,4 +1,4 @@
-﻿using ScoreOnes;
+/*using ScoreOnes;
 namespace Tally;
 
 public class UpdateScore
@@ -11,3 +11,4 @@ public class UpdateScore
         return score;
     }
 }
+*********Not using this file****************/
