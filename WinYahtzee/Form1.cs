@@ -14,6 +14,10 @@ namespace WinYahtzee
     {
         int[] cubes = new int[5];
         static int TotalTop = 0;
+        static int TotalBottom = 0;
+        static int TopBonus = 0;
+        static int YahtzeeBonus = 0;
+        static int NumOfYahtzees = 0;
         public Form1()
         {
             InitializeComponent();
@@ -75,6 +79,7 @@ namespace WinYahtzee
         {
             TotalTop = 0;
             lblTotalTop.Text = TotalTop.ToString();
+            lblTopBonus.Text = TopBonus.ToString();
             showDice[0] = picDi1; //build the pictureBox array to work in loops!
             showDice[1] = picDi2;
             showDice[2] = picDi3;
