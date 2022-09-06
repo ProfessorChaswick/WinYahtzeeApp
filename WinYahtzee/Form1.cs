@@ -12,13 +12,14 @@ namespace WinYahtzee
 {
     public partial class Form1 : Form
     {
-        int[] cubes = new int[5];
+        static int[] cubes = new int[5];
         static int TotalTop = 0;
         static int TotalBottom = 0;
         static int TopBonus = 0;
         static int YahtzeeBonus = 0;
         static int NumOfYahtzees = 0;
-        static int NumOfRolls = 3;
+        static int NumOfRolls;
+        
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace WinYahtzee
         Button[] scoreButton = new Button[15];
         Button[] holdButton = new Button[5]; //so I can reset all the hold buttons to green
         Label[] scoreBox = new Label[18]; //so I can set all the score labels to blank.
+        Label[] holdBox = new Label[5];
 
 
         private async void btnRoll_Click(object sender, EventArgs e)
@@ -39,6 +41,10 @@ namespace WinYahtzee
 
             for (int x = 0; x <= 4; x++)
             {
+                if (holdBox[x].Visible)
+                {
+                    continue;
+                }
                 cubes[x] = Roll.rollEm();
                 showDice[x].Image = Resource1.smDiceroll;
                 await Task.Delay(275);
@@ -85,6 +91,9 @@ namespace WinYahtzee
         private void Form1_Load(object sender, EventArgs e)
         {
             TotalTop = 0;
+            TotalBottom = 0;
+            NumOfRolls = 3;
+            NumOfYahtzees = 0;
             lblTotalTop.Text = TotalTop.ToString();
             lblTopBonus.Text = TopBonus.ToString();
             lblTotalBottom.Text = TotalBottom.ToString();
@@ -95,6 +104,12 @@ namespace WinYahtzee
             showDice[2] = picDi3;
             showDice[3] = picDi4;
             showDice[4] = picDi5;
+            holdBox[0] = lblHeld1;
+            holdBox[1] = lblHeld2;
+            holdBox[2] = lblHeld3;
+            holdBox[3] = lblHeld4;
+            holdBox[4] = lblHeld5;
+
         }
 
         private void picDi1_MouseHover(object sender, EventArgs e)
@@ -117,8 +132,7 @@ namespace WinYahtzee
             scrBtnOne.BackColor = Color.LightSlateGray;
             scrBtnOne.Enabled = false;
             btnRoll.Focus();
-            NumOfRolls = 3;
-            btnRoll.Enabled = true;
+            clearCubes();
         }
 
         private void ScrBtnTwo_Click(object sender, EventArgs e)
@@ -129,6 +143,7 @@ namespace WinYahtzee
             ScrBtnTwo.BackColor = Color.LightSlateGray;
             ScrBtnTwo.Enabled = false;
             btnRoll.Focus();
+            clearCubes();
         }
         public static int AddTop(int dots)
             {
@@ -175,6 +190,37 @@ namespace WinYahtzee
             scrBtnSix.BackColor = Color.LightSlateGray;
             scrBtnSix.Enabled = false;
             btnRoll.Focus();
+        }
+
+        private void picDi1_Click(object sender, EventArgs e)
+        {
+            if (lblHeld1.Visible)
+            {
+                lblHeld1.Visible = false;
+                picDi1.BackColor = Color.Green;
+                lblHoverTip.Text = "Click to Hold";
+            }
+            else
+            {
+                lblHeld1.Visible = true;
+                picDi1.BackColor = Color.Red;
+                lblHoverTip.Text = "Click to release";
+            }
+                
+        }
+        private void clearCubes()
+        {
+            NumOfRolls = 3;
+            for (int i = 0; i <= 4; i++)
+            {
+                showDice[i].Image = Resource1.blank;
+                cubes[i] = 0;
+            }
+            btnRoll.Enabled = true;
+            NumOfRolls = 3;
+            lblNumOfRolls.Text = NumOfRolls.ToString();
+
+
         }
     }
 }

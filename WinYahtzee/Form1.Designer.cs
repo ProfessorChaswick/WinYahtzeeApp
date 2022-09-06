@@ -94,6 +94,11 @@
             this.scrBtnOne = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNumOfRolls = new System.Windows.Forms.Label();
+            this.lblHeld1 = new System.Windows.Forms.Label();
+            this.lblHeld2 = new System.Windows.Forms.Label();
+            this.lblHeld3 = new System.Windows.Forms.Label();
+            this.lblHeld4 = new System.Windows.Forms.Label();
+            this.lblHeld5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDi5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi2)).BeginInit();
@@ -128,6 +133,7 @@
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // picDi5
             // 
@@ -150,6 +156,7 @@
             this.picDi1.Size = new System.Drawing.Size(35, 40);
             this.picDi1.TabIndex = 3;
             this.picDi1.TabStop = false;
+            this.picDi1.Click += new System.EventHandler(this.picDi1_Click);
             this.picDi1.MouseLeave += new System.EventHandler(this.picDi1_MouseLeave);
             this.picDi1.MouseHover += new System.EventHandler(this.picDi1_MouseHover);
             // 
@@ -892,12 +899,82 @@
             this.lblNumOfRolls.Text = "3";
             this.lblNumOfRolls.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // lblHeld1
+            // 
+            this.lblHeld1.BackColor = System.Drawing.Color.Yellow;
+            this.lblHeld1.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld1.ForeColor = System.Drawing.Color.Purple;
+            this.lblHeld1.Location = new System.Drawing.Point(213, 445);
+            this.lblHeld1.Name = "lblHeld1";
+            this.lblHeld1.Size = new System.Drawing.Size(35, 16);
+            this.lblHeld1.TabIndex = 10;
+            this.lblHeld1.Text = "HELD";
+            this.lblHeld1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHeld1.Visible = false;
+            // 
+            // lblHeld2
+            // 
+            this.lblHeld2.BackColor = System.Drawing.Color.Yellow;
+            this.lblHeld2.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld2.ForeColor = System.Drawing.Color.Purple;
+            this.lblHeld2.Location = new System.Drawing.Point(254, 445);
+            this.lblHeld2.Name = "lblHeld2";
+            this.lblHeld2.Size = new System.Drawing.Size(35, 16);
+            this.lblHeld2.TabIndex = 11;
+            this.lblHeld2.Text = "HELD";
+            this.lblHeld2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHeld2.Visible = false;
+            // 
+            // lblHeld3
+            // 
+            this.lblHeld3.BackColor = System.Drawing.Color.Yellow;
+            this.lblHeld3.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld3.ForeColor = System.Drawing.Color.Purple;
+            this.lblHeld3.Location = new System.Drawing.Point(295, 445);
+            this.lblHeld3.Name = "lblHeld3";
+            this.lblHeld3.Size = new System.Drawing.Size(35, 16);
+            this.lblHeld3.TabIndex = 12;
+            this.lblHeld3.Text = "HELD";
+            this.lblHeld3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHeld3.Visible = false;
+            // 
+            // lblHeld4
+            // 
+            this.lblHeld4.BackColor = System.Drawing.Color.Yellow;
+            this.lblHeld4.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld4.ForeColor = System.Drawing.Color.Purple;
+            this.lblHeld4.Location = new System.Drawing.Point(336, 445);
+            this.lblHeld4.Name = "lblHeld4";
+            this.lblHeld4.Size = new System.Drawing.Size(35, 16);
+            this.lblHeld4.TabIndex = 13;
+            this.lblHeld4.Text = "HELD";
+            this.lblHeld4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHeld4.Visible = false;
+            // 
+            // lblHeld5
+            // 
+            this.lblHeld5.BackColor = System.Drawing.Color.Yellow;
+            this.lblHeld5.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld5.ForeColor = System.Drawing.Color.Purple;
+            this.lblHeld5.Location = new System.Drawing.Point(377, 445);
+            this.lblHeld5.Name = "lblHeld5";
+            this.lblHeld5.Size = new System.Drawing.Size(35, 16);
+            this.lblHeld5.TabIndex = 14;
+            this.lblHeld5.Text = "HELD";
+            this.lblHeld5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHeld5.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(421, 557);
+            this.Controls.Add(this.lblHeld5);
+            this.Controls.Add(this.lblHeld4);
+            this.Controls.Add(this.lblHeld3);
+            this.Controls.Add(this.lblHeld2);
+            this.Controls.Add(this.lblHeld1);
             this.Controls.Add(this.lblNumOfRolls);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHoverTip);
@@ -997,5 +1074,10 @@
         private Label lblTwos;
         private Label lblSixes;
         private Label lblNumOfRolls;
+        private Label lblHeld1;
+        private Label lblHeld2;
+        private Label lblHeld3;
+        private Label lblHeld4;
+        private Label lblHeld5;
     }
 }
