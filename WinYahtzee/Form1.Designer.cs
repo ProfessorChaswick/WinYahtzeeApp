@@ -93,6 +93,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.scrBtnOne = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblNumOfRolls = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDi5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi2)).BeginInit();
@@ -109,13 +110,13 @@
             // btnRoll
             // 
             this.btnRoll.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnRoll.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRoll.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRoll.ForeColor = System.Drawing.Color.GhostWhite;
             this.btnRoll.Location = new System.Drawing.Point(213, 507);
             this.btnRoll.Name = "btnRoll";
-            this.btnRoll.Size = new System.Drawing.Size(55, 35);
+            this.btnRoll.Size = new System.Drawing.Size(35, 35);
             this.btnRoll.TabIndex = 0;
-            this.btnRoll.Text = "Roll";
+            this.btnRoll.Text = "roll";
             this.btnRoll.UseVisualStyleBackColor = false;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
@@ -191,9 +192,9 @@
             this.lblHoverTip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblHoverTip.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHoverTip.ForeColor = System.Drawing.Color.Yellow;
-            this.lblHoverTip.Location = new System.Drawing.Point(274, 511);
+            this.lblHoverTip.Location = new System.Drawing.Point(295, 511);
             this.lblHoverTip.Name = "lblHoverTip";
-            this.lblHoverTip.Size = new System.Drawing.Size(138, 26);
+            this.lblHoverTip.Size = new System.Drawing.Size(117, 26);
             this.lblHoverTip.TabIndex = 7;
             this.lblHoverTip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblHoverTip.Visible = false;
@@ -881,12 +882,23 @@
             this.label2.Text = "Ones";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblNumOfRolls
+            // 
+            this.lblNumOfRolls.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNumOfRolls.Location = new System.Drawing.Point(259, 512);
+            this.lblNumOfRolls.Name = "lblNumOfRolls";
+            this.lblNumOfRolls.Size = new System.Drawing.Size(25, 25);
+            this.lblNumOfRolls.TabIndex = 9;
+            this.lblNumOfRolls.Text = "3";
+            this.lblNumOfRolls.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(421, 557);
+            this.Controls.Add(this.lblNumOfRolls);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHoverTip);
             this.Controls.Add(this.picDi4);
@@ -984,5 +996,6 @@
         private Label lblThrees;
         private Label lblTwos;
         private Label lblSixes;
+        private Label lblNumOfRolls;
     }
 }
