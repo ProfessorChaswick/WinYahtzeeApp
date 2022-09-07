@@ -199,13 +199,13 @@
             // 
             // lblHoverTip
             // 
-            this.lblHoverTip.BackColor = System.Drawing.Color.Purple;
+            this.lblHoverTip.BackColor = System.Drawing.Color.Thistle;
             this.lblHoverTip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblHoverTip.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHoverTip.ForeColor = System.Drawing.Color.Yellow;
-            this.lblHoverTip.Location = new System.Drawing.Point(295, 511);
+            this.lblHoverTip.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHoverTip.ForeColor = System.Drawing.Color.Blue;
+            this.lblHoverTip.Location = new System.Drawing.Point(290, 507);
             this.lblHoverTip.Name = "lblHoverTip";
-            this.lblHoverTip.Size = new System.Drawing.Size(117, 26);
+            this.lblHoverTip.Size = new System.Drawing.Size(89, 16);
             this.lblHoverTip.TabIndex = 7;
             this.lblHoverTip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblHoverTip.Visible = false;
@@ -898,7 +898,7 @@
             this.lblNumOfRolls.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNumOfRolls.Location = new System.Drawing.Point(259, 512);
             this.lblNumOfRolls.Name = "lblNumOfRolls";
-            this.lblNumOfRolls.Size = new System.Drawing.Size(25, 25);
+            this.lblNumOfRolls.Size = new System.Drawing.Size(22, 22);
             this.lblNumOfRolls.TabIndex = 9;
             this.lblNumOfRolls.Text = "3";
             this.lblNumOfRolls.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

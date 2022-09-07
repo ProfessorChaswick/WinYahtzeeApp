@@ -19,7 +19,9 @@ namespace WinYahtzee
         static int YahtzeeBonus = 0;
         static int NumOfYahtzees = 0;
         static int NumOfRolls;
-        
+        static bool allDone = false; // To award top bonus only one time.
+
+
         public Form1()
         {
             InitializeComponent();
@@ -133,6 +135,7 @@ namespace WinYahtzee
             scrBtnOne.Enabled = false;
             btnRoll.Focus();
             clearCubes();
+            checkTopBonus(TotalTop);
         }
 
         private void ScrBtnTwo_Click(object sender, EventArgs e)
@@ -144,11 +147,11 @@ namespace WinYahtzee
             ScrBtnTwo.Enabled = false;
             btnRoll.Focus();
             clearCubes();
+            checkTopBonus(TotalTop);
         }
         public static int AddTop(int dots)
             {
                 TotalTop += dots;
-                //Top += dots;int
                 return TotalTop;
             }
 
@@ -161,6 +164,7 @@ namespace WinYahtzee
             scrBtnThree.Enabled = false;
             btnRoll.Focus();
             clearCubes();
+            checkTopBonus(TotalTop);
         }
 
         private void scrBtnFour_Click(object sender, EventArgs e)
@@ -172,6 +176,7 @@ namespace WinYahtzee
             scrBtnFour.Enabled = false;
             btnRoll.Focus();
             clearCubes();
+            checkTopBonus(TotalTop);
         }
 
         private void scrBtnFive_Click(object sender, EventArgs e)
@@ -183,17 +188,19 @@ namespace WinYahtzee
             scrBtnFive.Enabled = false;
             btnRoll.Focus();
             clearCubes();
+            checkTopBonus(TotalTop);
         }
 
         private void scrBtnSix_Click(object sender, EventArgs e)
         {
             int sixes = Score6.AddSixes(cubes);
             lblSixes.Text = sixes.ToString();
-            lblTotalTop.Text= AddTop(sixes).ToString();
+            lblTotalTop.Text = AddTop(sixes).ToString();
             scrBtnSix.BackColor = Color.LightSlateGray;
             scrBtnSix.Enabled = false;
             btnRoll.Focus();
             clearCubes();
+            checkTopBonus(TotalTop);
         }
 
         private void picDi1_Click(object sender, EventArgs e)
@@ -289,6 +296,17 @@ namespace WinYahtzee
                 lblHeld5.Visible = true;
                 picDi5.BackColor = Color.Red;
                 lblHoverTip.Text = "Click to release";
+            }
+        }
+        private void checkTopBonus(int topScore)
+        {
+            if (topScore >= 63 && allDone == false)
+            {
+                TopBonus = 35;
+                allDone = true;
+                lblTopBonus.Text = TopBonus.ToString();
+                TotalTop += TopBonus;
+                lblTotalTop.Text = TotalTop.ToString();
             }
         }
     }
