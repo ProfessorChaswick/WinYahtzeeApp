@@ -160,6 +160,7 @@ namespace WinYahtzee
             scrBtnThree.BackColor = Color.LightSlateGray;
             scrBtnThree.Enabled = false;
             btnRoll.Focus();
+            clearCubes();
         }
 
         private void scrBtnFour_Click(object sender, EventArgs e)
@@ -170,6 +171,7 @@ namespace WinYahtzee
             scrBtnFour.BackColor = Color.LightSlateGray;
             scrBtnFour.Enabled = false;
             btnRoll.Focus();
+            clearCubes();
         }
 
         private void scrBtnFive_Click(object sender, EventArgs e)
@@ -180,6 +182,7 @@ namespace WinYahtzee
             scrBtnFive.BackColor = Color.LightSlateGray;
             scrBtnFive.Enabled = false;
             btnRoll.Focus();
+            clearCubes();
         }
 
         private void scrBtnSix_Click(object sender, EventArgs e)
@@ -190,6 +193,7 @@ namespace WinYahtzee
             scrBtnSix.BackColor = Color.LightSlateGray;
             scrBtnSix.Enabled = false;
             btnRoll.Focus();
+            clearCubes();
         }
 
         private void picDi1_Click(object sender, EventArgs e)
@@ -199,8 +203,7 @@ namespace WinYahtzee
                 lblHeld1.Visible = false;
                 picDi1.BackColor = Color.Green;
                 lblHoverTip.Text = "Click to Hold";
-            }
-            else
+            }else
             {
                 lblHeld1.Visible = true;
                 picDi1.BackColor = Color.Red;
@@ -214,6 +217,8 @@ namespace WinYahtzee
             for (int i = 0; i <= 4; i++)
             {
                 showDice[i].Image = Resource1.blank;
+                showDice[i].BackColor = Color.Green;
+                holdBox[i].Visible = false;
                 cubes[i] = 0;
             }
             btnRoll.Enabled = true;
@@ -221,6 +226,70 @@ namespace WinYahtzee
             lblNumOfRolls.Text = NumOfRolls.ToString();
 
 
+        }
+
+        private void picDi2_Click(object sender, EventArgs e)
+        {
+            if (lblHeld2.Visible)
+            {
+                lblHeld2.Visible = false;
+                picDi2.BackColor = Color.Green;
+                lblHoverTip.Text = "Click to Hold";
+            }else
+            {
+                lblHeld2.Visible = true;
+                picDi2.BackColor = Color.Red;
+                lblHoverTip.Text = "Click to release";
+            }
+
+        }
+
+        private void picDi3_Click(object sender, EventArgs e)
+        {
+            if (lblHeld3.Visible)
+            {
+                lblHeld3.Visible = false;
+                picDi3.BackColor = Color.Green;
+                lblHoverTip.Text = "Click to Hold";
+            }
+            else
+            {
+                lblHeld3.Visible = true;
+                picDi3.BackColor = Color.Red;
+                lblHoverTip.Text = "Click to release";
+            }
+        }
+
+        private void picDi4_Click(object sender, EventArgs e)
+        {
+            if (lblHeld4.Visible)
+            {
+                lblHeld4.Visible = false;
+                picDi4.BackColor = Color.Green;
+                lblHoverTip.Text = "Click to Hold";
+            }
+            else
+            {
+                lblHeld4.Visible = true;
+                picDi4.BackColor = Color.Red;
+                lblHoverTip.Text = "Click to release";
+            }
+        }
+
+        private void picDi5_Click(object sender, EventArgs e)
+        {
+            if (lblHeld5.Visible)
+            {
+                lblHeld5.Visible = false;
+                picDi5.BackColor = Color.Green;
+                lblHoverTip.Text = "Click to Hold";
+            }
+            else
+            {
+                lblHeld5.Visible = true;
+                picDi5.BackColor = Color.Red;
+                lblHoverTip.Text = "Click to release";
+            }
         }
     }
 }

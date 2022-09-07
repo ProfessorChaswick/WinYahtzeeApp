@@ -115,11 +115,11 @@
             // btnRoll
             // 
             this.btnRoll.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnRoll.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRoll.ForeColor = System.Drawing.Color.GhostWhite;
             this.btnRoll.Location = new System.Drawing.Point(213, 507);
             this.btnRoll.Name = "btnRoll";
-            this.btnRoll.Size = new System.Drawing.Size(35, 35);
+            this.btnRoll.Size = new System.Drawing.Size(40, 35);
             this.btnRoll.TabIndex = 0;
             this.btnRoll.Text = "roll";
             this.btnRoll.UseVisualStyleBackColor = false;
@@ -145,6 +145,7 @@
             this.picDi5.Size = new System.Drawing.Size(35, 40);
             this.picDi5.TabIndex = 2;
             this.picDi5.TabStop = false;
+            this.picDi5.Click += new System.EventHandler(this.picDi5_Click);
             // 
             // picDi1
             // 
@@ -170,6 +171,7 @@
             this.picDi2.Size = new System.Drawing.Size(35, 40);
             this.picDi2.TabIndex = 4;
             this.picDi2.TabStop = false;
+            this.picDi2.Click += new System.EventHandler(this.picDi2_Click);
             // 
             // picDi3
             // 
@@ -181,6 +183,7 @@
             this.picDi3.Size = new System.Drawing.Size(35, 40);
             this.picDi3.TabIndex = 5;
             this.picDi3.TabStop = false;
+            this.picDi3.Click += new System.EventHandler(this.picDi3_Click);
             // 
             // picDi4
             // 
@@ -192,6 +195,7 @@
             this.picDi4.Size = new System.Drawing.Size(35, 40);
             this.picDi4.TabIndex = 6;
             this.picDi4.TabStop = false;
+            this.picDi4.Click += new System.EventHandler(this.picDi4_Click);
             // 
             // lblHoverTip
             // 
@@ -902,65 +906,65 @@
             // lblHeld1
             // 
             this.lblHeld1.BackColor = System.Drawing.Color.Yellow;
-            this.lblHeld1.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHeld1.ForeColor = System.Drawing.Color.Purple;
             this.lblHeld1.Location = new System.Drawing.Point(213, 445);
             this.lblHeld1.Name = "lblHeld1";
             this.lblHeld1.Size = new System.Drawing.Size(35, 16);
             this.lblHeld1.TabIndex = 10;
-            this.lblHeld1.Text = "HELD";
+            this.lblHeld1.Text = "Held";
             this.lblHeld1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld1.Visible = false;
             // 
             // lblHeld2
             // 
             this.lblHeld2.BackColor = System.Drawing.Color.Yellow;
-            this.lblHeld2.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHeld2.ForeColor = System.Drawing.Color.Purple;
             this.lblHeld2.Location = new System.Drawing.Point(254, 445);
             this.lblHeld2.Name = "lblHeld2";
             this.lblHeld2.Size = new System.Drawing.Size(35, 16);
             this.lblHeld2.TabIndex = 11;
-            this.lblHeld2.Text = "HELD";
+            this.lblHeld2.Text = "Held";
             this.lblHeld2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld2.Visible = false;
             // 
             // lblHeld3
             // 
             this.lblHeld3.BackColor = System.Drawing.Color.Yellow;
-            this.lblHeld3.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHeld3.ForeColor = System.Drawing.Color.Purple;
             this.lblHeld3.Location = new System.Drawing.Point(295, 445);
             this.lblHeld3.Name = "lblHeld3";
             this.lblHeld3.Size = new System.Drawing.Size(35, 16);
             this.lblHeld3.TabIndex = 12;
-            this.lblHeld3.Text = "HELD";
+            this.lblHeld3.Text = "Held";
             this.lblHeld3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld3.Visible = false;
             // 
             // lblHeld4
             // 
             this.lblHeld4.BackColor = System.Drawing.Color.Yellow;
-            this.lblHeld4.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHeld4.ForeColor = System.Drawing.Color.Purple;
             this.lblHeld4.Location = new System.Drawing.Point(336, 445);
             this.lblHeld4.Name = "lblHeld4";
             this.lblHeld4.Size = new System.Drawing.Size(35, 16);
             this.lblHeld4.TabIndex = 13;
-            this.lblHeld4.Text = "HELD";
+            this.lblHeld4.Text = "Held";
             this.lblHeld4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld4.Visible = false;
             // 
             // lblHeld5
             // 
             this.lblHeld5.BackColor = System.Drawing.Color.Yellow;
-            this.lblHeld5.Font = new System.Drawing.Font("Perpetua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeld5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHeld5.ForeColor = System.Drawing.Color.Purple;
             this.lblHeld5.Location = new System.Drawing.Point(377, 445);
             this.lblHeld5.Name = "lblHeld5";
             this.lblHeld5.Size = new System.Drawing.Size(35, 16);
             this.lblHeld5.TabIndex = 14;
-            this.lblHeld5.Text = "HELD";
+            this.lblHeld5.Text = "Held";
             this.lblHeld5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld5.Visible = false;
             // 
