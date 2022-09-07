@@ -133,7 +133,6 @@
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
-            this.label1.Visible = false;
             // 
             // picDi5
             // 
@@ -146,6 +145,8 @@
             this.picDi5.TabIndex = 2;
             this.picDi5.TabStop = false;
             this.picDi5.Click += new System.EventHandler(this.picDi5_Click);
+            this.picDi5.MouseLeave += new System.EventHandler(this.picDi1_MouseLeave);
+            this.picDi5.MouseHover += new System.EventHandler(this.picDi1_MouseHover);
             // 
             // picDi1
             // 
@@ -172,6 +173,8 @@
             this.picDi2.TabIndex = 4;
             this.picDi2.TabStop = false;
             this.picDi2.Click += new System.EventHandler(this.picDi2_Click);
+            this.picDi2.MouseLeave += new System.EventHandler(this.picDi1_MouseLeave);
+            this.picDi2.MouseHover += new System.EventHandler(this.picDi1_MouseHover);
             // 
             // picDi3
             // 
@@ -184,6 +187,8 @@
             this.picDi3.TabIndex = 5;
             this.picDi3.TabStop = false;
             this.picDi3.Click += new System.EventHandler(this.picDi3_Click);
+            this.picDi3.MouseLeave += new System.EventHandler(this.picDi1_MouseLeave);
+            this.picDi3.MouseHover += new System.EventHandler(this.picDi1_MouseHover);
             // 
             // picDi4
             // 
@@ -196,6 +201,8 @@
             this.picDi4.TabIndex = 6;
             this.picDi4.TabStop = false;
             this.picDi4.Click += new System.EventHandler(this.picDi4_Click);
+            this.picDi4.MouseLeave += new System.EventHandler(this.picDi1_MouseLeave);
+            this.picDi4.MouseHover += new System.EventHandler(this.picDi1_MouseHover);
             // 
             // lblHoverTip
             // 
@@ -207,6 +214,7 @@
             this.lblHoverTip.Name = "lblHoverTip";
             this.lblHoverTip.Size = new System.Drawing.Size(89, 16);
             this.lblHoverTip.TabIndex = 7;
+            this.lblHoverTip.Text = "Click to Hold";
             this.lblHoverTip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblHoverTip.Visible = false;
             // 
@@ -482,6 +490,7 @@
             this.scrBtnChance.Size = new System.Drawing.Size(28, 28);
             this.scrBtnChance.TabIndex = 36;
             this.scrBtnChance.UseVisualStyleBackColor = false;
+            this.scrBtnChance.Click += new System.EventHandler(this.scrBtnChance_Click);
             // 
             // scrBtnYzee
             // 
@@ -493,6 +502,7 @@
             this.scrBtnYzee.Size = new System.Drawing.Size(28, 28);
             this.scrBtnYzee.TabIndex = 35;
             this.scrBtnYzee.UseVisualStyleBackColor = false;
+            this.scrBtnYzee.Click += new System.EventHandler(this.scrBtnYzee_Click);
             // 
             // scrBtnLgStr
             // 
@@ -557,6 +567,7 @@
             this.scrBtn3K.Size = new System.Drawing.Size(28, 28);
             this.scrBtn3K.TabIndex = 29;
             this.scrBtn3K.UseVisualStyleBackColor = false;
+            this.scrBtn3K.Click += new System.EventHandler(this.scrBtn3K_Click);
             // 
             // pictureBox4
             // 
@@ -898,7 +909,7 @@
             this.lblNumOfRolls.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNumOfRolls.Location = new System.Drawing.Point(259, 512);
             this.lblNumOfRolls.Name = "lblNumOfRolls";
-            this.lblNumOfRolls.Size = new System.Drawing.Size(22, 22);
+            this.lblNumOfRolls.Size = new System.Drawing.Size(25, 22);
             this.lblNumOfRolls.TabIndex = 9;
             this.lblNumOfRolls.Text = "3";
             this.lblNumOfRolls.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

@@ -7,17 +7,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinYahtzee", "WinYahtzee\Wi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RollDice", "RollDice\RollDice.csproj", "{EE5E7CA2-42A2-48FA-9463-842016F91B6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreOnes", "ScoreOnes\ScoreOnes.csproj", "{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreOnes", "ScoreOnes\ScoreOnes.csproj", "{B2FCBF8A-F528-4361-A0D2-181DBDD48AB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreTwos", "ScoreTwos\ScoreTwos.csproj", "{0C469C4E-A945-462D-AB0B-758D4D6303D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreTwos", "ScoreTwos\ScoreTwos.csproj", "{0C469C4E-A945-462D-AB0B-758D4D6303D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreThrees", "ScoreThrees\ScoreThrees.csproj", "{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreThrees", "ScoreThrees\ScoreThrees.csproj", "{7AB55FDA-F09D-4CA1-A10C-E0058A649F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreFours", "ScoreFours\ScoreFours.csproj", "{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreFours", "ScoreFours\ScoreFours.csproj", "{815EA285-0EA3-47AD-8EE6-44A58E1F14B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreFives", "ScoreFives\ScoreFives.csproj", "{5798AA8A-A833-4434-936A-364F28634F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreFives", "ScoreFives\ScoreFives.csproj", "{5798AA8A-A833-4434-936A-364F28634F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreSixes", "ScoreSixes\ScoreSixes.csproj", "{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreSixes", "ScoreSixes\ScoreSixes.csproj", "{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Score3ofaKind", "Score3ofaKind\Score3ofaKind.csproj", "{F7655B4C-F3D5-4B7A-B826-0130BA2784D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreChance", "ScoreChance\ScoreChance.csproj", "{2F2EC7A5-ADA2-4085-9866-B0B89769E06D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreYahtzee", "ScoreYahtzee\ScoreYahtzee.csproj", "{E761FCC3-571A-431B-8248-ECE77973BE0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +63,18 @@ Global
 		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4765C80C-C7FA-44CE-BBC4-E72355E7BFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7655B4C-F3D5-4B7A-B826-0130BA2784D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7655B4C-F3D5-4B7A-B826-0130BA2784D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7655B4C-F3D5-4B7A-B826-0130BA2784D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7655B4C-F3D5-4B7A-B826-0130BA2784D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2EC7A5-ADA2-4085-9866-B0B89769E06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2EC7A5-ADA2-4085-9866-B0B89769E06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2EC7A5-ADA2-4085-9866-B0B89769E06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2EC7A5-ADA2-4085-9866-B0B89769E06D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E761FCC3-571A-431B-8248-ECE77973BE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E761FCC3-571A-431B-8248-ECE77973BE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E761FCC3-571A-431B-8248-ECE77973BE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E761FCC3-571A-431B-8248-ECE77973BE0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
