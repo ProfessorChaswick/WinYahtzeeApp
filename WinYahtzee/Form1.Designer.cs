@@ -99,6 +99,7 @@
             this.lblHeld3 = new System.Windows.Forms.Label();
             this.lblHeld4 = new System.Windows.Forms.Label();
             this.lblHeld5 = new System.Windows.Forms.Label();
+            this.lblBonusAnnounce = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDi5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi2)).BeginInit();
@@ -979,12 +980,24 @@
             this.lblHeld5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld5.Visible = false;
             // 
+            // lblBonusAnnounce
+            // 
+            this.lblBonusAnnounce.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBonusAnnounce.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblBonusAnnounce.Location = new System.Drawing.Point(205, 198);
+            this.lblBonusAnnounce.Name = "lblBonusAnnounce";
+            this.lblBonusAnnounce.Size = new System.Drawing.Size(193, 23);
+            this.lblBonusAnnounce.TabIndex = 15;
+            this.lblBonusAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblBonusAnnounce.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(421, 557);
+            this.Controls.Add(this.lblBonusAnnounce);
             this.Controls.Add(this.lblHeld5);
             this.Controls.Add(this.lblHeld4);
             this.Controls.Add(this.lblHeld3);
@@ -1094,5 +1107,6 @@
         private Label lblHeld3;
         private Label lblHeld4;
         private Label lblHeld5;
+        private Label lblBonusAnnounce;
     }
 }

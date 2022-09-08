@@ -20,8 +20,9 @@ namespace WinYahtzee
         static int TotalBottom = 0;
         static int TopBonus = 0;
         static int YahtzeeBonus = 0;
-        static int NumOfYahtzees = 0;
+        static int NumOfYahtzees;
         static int NumOfRolls;
+        static int gt = 0;
         static bool allDone = false; // To award top bonus only one time.
 
 
@@ -82,6 +83,7 @@ namespace WinYahtzee
             if(NumOfRolls == 0)
             {
                 btnRoll.Enabled = false;
+                panel1.Focus();
             }
             // temp bits for testing
             int rollTotal = 0;
@@ -136,9 +138,9 @@ namespace WinYahtzee
             lblTotalTop.Text = AddTop(ones).ToString();
             scrBtnOne.BackColor = Color.LightSlateGray;
             scrBtnOne.Enabled = false;
-            clearCubes();
             checkTopBonus(TotalTop);
             checkYahtzees();
+            clearCubes();
         }
 
         private void ScrBtnTwo_Click(object sender, EventArgs e)
@@ -148,9 +150,9 @@ namespace WinYahtzee
             lblTotalTop.Text = AddTop(twos).ToString();
             ScrBtnTwo.BackColor = Color.LightSlateGray;
             ScrBtnTwo.Enabled = false;
-            clearCubes();
             checkTopBonus(TotalTop);
             checkYahtzees();
+            clearCubes();
         }
         public static int AddTop(int dots)
             {
@@ -162,6 +164,10 @@ namespace WinYahtzee
             TotalBottom += dots;
             return TotalBottom;
         }
+        public static void addGT()
+        {
+            gt = TotalTop + TotalBottom + YahtzeeBonus;
+        }
 
         private void scrBtnThree_Click(object sender, EventArgs e)
         {
@@ -170,9 +176,9 @@ namespace WinYahtzee
             lblTotalTop.Text = AddTop(threes).ToString();
             scrBtnThree.BackColor = Color.LightSlateGray;
             scrBtnThree.Enabled = false;
-            clearCubes();
             checkTopBonus(TotalTop);
             checkYahtzees();
+            clearCubes();
         }
 
         private void scrBtnFour_Click(object sender, EventArgs e)
@@ -182,9 +188,9 @@ namespace WinYahtzee
             lblTotalTop.Text = AddTop(fours).ToString();
             scrBtnFour.BackColor = Color.LightSlateGray;
             scrBtnFour.Enabled = false;
-            clearCubes();
             checkTopBonus(TotalTop);
             checkYahtzees();
+            clearCubes();
         }
 
         private void scrBtnFive_Click(object sender, EventArgs e)
@@ -194,9 +200,9 @@ namespace WinYahtzee
             lblTotalTop.Text = AddTop(fives).ToString();
             scrBtnFive.BackColor = Color.LightSlateGray;
             scrBtnFive.Enabled = false;
-            clearCubes();
             checkTopBonus(TotalTop);
             checkYahtzees();
+            clearCubes();
         }
 
         private void scrBtnSix_Click(object sender, EventArgs e)
@@ -206,9 +212,9 @@ namespace WinYahtzee
             lblTotalTop.Text = AddTop(sixes).ToString();
             scrBtnSix.BackColor = Color.LightSlateGray;
             scrBtnSix.Enabled = false;
-            clearCubes();
             checkTopBonus(TotalTop);
             checkYahtzees();
+            clearCubes();
         }
 
         private void picDi1_Click(object sender, EventArgs e)
@@ -241,7 +247,16 @@ namespace WinYahtzee
             NumOfRolls = 3;
             lblNumOfRolls.Text = NumOfRolls.ToString();
             label1.Text = NumOfYahtzees.ToString(); /////for testing**
-
+            addGT();
+            lblGT.Text = gt.ToString();
+            if (TopBonus == 35)
+            {
+                int announce;
+                announce = TotalTop - TopBonus;
+                lblBonusAnnounce.Text = "Bonus earned with: ";
+                lblBonusAnnounce.Text += announce.ToString();
+                lblBonusAnnounce.Visible = true;
+            }
 
         }
 
@@ -327,8 +342,8 @@ namespace WinYahtzee
             lblTotalBottom.Text = AddBottom(threeOfaKind).ToString();
             scrBtn3K.BackColor = Color.LightSlateGray;
             scrBtn3K.Enabled = false;
-            clearCubes();
             checkYahtzees();
+            clearCubes();
         }
 
         private void scrBtnChance_Click(object sender, EventArgs e)
@@ -338,8 +353,8 @@ namespace WinYahtzee
             lblTotalBottom.Text = AddBottom(chance).ToString();
             scrBtnChance.BackColor = Color.LightSlateGray;
             scrBtnChance.Enabled = false;
-            clearCubes();
             checkYahtzees();
+            clearCubes();
         }
         private void countYahtzees()
         {
@@ -363,7 +378,8 @@ namespace WinYahtzee
             lblTotalBottom.Text = AddBottom(yZee).ToString();
             scrBtnYzee.BackColor = Color.LightSlateGray;
             scrBtnYzee.Enabled = false;
-            NumOfYahtzees++;
+            if(yZee == 50)
+                NumOfYahtzees++;
             clearCubes();
         }
     }
