@@ -515,6 +515,7 @@
             this.scrBtnLgStr.Size = new System.Drawing.Size(28, 28);
             this.scrBtnLgStr.TabIndex = 34;
             this.scrBtnLgStr.UseVisualStyleBackColor = false;
+            this.scrBtnLgStr.Click += new System.EventHandler(this.scrBtnLgStr_Click);
             // 
             // scrBtnSmStr
             // 
@@ -526,6 +527,7 @@
             this.scrBtnSmStr.Size = new System.Drawing.Size(28, 28);
             this.scrBtnSmStr.TabIndex = 33;
             this.scrBtnSmStr.UseVisualStyleBackColor = false;
+            this.scrBtnSmStr.Click += new System.EventHandler(this.scrBtnSmStr_Click);
             // 
             // scrBtnFH
             // 
@@ -1019,7 +1021,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yahtzee © Professor Chaswick";
+            this.Text = "SolitairZee © Professor Chaswick";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDi5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi1)).EndInit();

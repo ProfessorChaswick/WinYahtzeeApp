@@ -16,8 +16,10 @@
     <ProjectReference Include="..\ScoreFives\ScoreFives.csproj" />
     <ProjectReference Include="..\ScoreFours\ScoreFours.csproj" />
     <ProjectReference Include="..\ScoreFullHouse\ScoreFullHouse.csproj" />
+    <ProjectReference Include="..\ScoreLgStraight\ScoreLgStraight.csproj" />
     <ProjectReference Include="..\ScoreOnes\ScoreOnes.csproj" />
     <ProjectReference Include="..\ScoreSixes\ScoreSixes.csproj" />
+    <ProjectReference Include="..\ScoreSmStraight\ScoreSmStraight.csproj" />
     <ProjectReference Include="..\ScoreThrees\ScoreThrees.csproj" />
     <ProjectReference Include="..\ScoreTwos\ScoreTwos.csproj" />
     <ProjectReference Include="..\ScoreYahtzee\ScoreYahtzee.csproj" />

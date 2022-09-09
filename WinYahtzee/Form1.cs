@@ -10,6 +10,8 @@ using ScoreChance;
 using ScoreYahtzee;
 using Score4K;
 using ScoreFullHouse;
+using ScoreLgStraight;
+using ScoreSmStraight;
 using System.Drawing;
 using System.Threading;
 
@@ -404,6 +406,27 @@ namespace WinYahtzee
             scrBtnFH.BackColor = Color.LightSlateGray;
             scrBtnFH.Enabled = false;
             clearCubes();
+        }
+
+        private void scrBtnSmStr_Click(object sender, EventArgs e)
+        {
+            int smStr = SmStr.Small(cubes);
+            lblSmall.Text = smStr.ToString();
+            lblTotalBottom.Text = AddBottom(smStr).ToString();
+            scrBtnSmStr.BackColor = Color.LightSlateGray;
+            scrBtnSmStr.Enabled = false;
+            clearCubes();
+        }
+
+        private void scrBtnLgStr_Click(object sender, EventArgs e)
+        {
+            int lgStr = LgStr.Large(cubes);
+            lblLarge.Text = lgStr.ToString();
+            lblTotalBottom.Text= AddBottom(lgStr).ToString();
+            scrBtnLgStr.BackColor = Color.LightSlateGray;
+            scrBtnLgStr.Enabled = false;
+            clearCubes();
+
         }
     }
 }

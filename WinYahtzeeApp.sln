@@ -25,9 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreChance", "ScoreChance\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreYahtzee", "ScoreYahtzee\ScoreYahtzee.csproj", "{E761FCC3-571A-431B-8248-ECE77973BE0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Score4K", "Score4K\Score4K.csproj", "{92D159F4-20B8-4102-9B9B-B4CF5A863B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Score4K", "Score4K\Score4K.csproj", "{92D159F4-20B8-4102-9B9B-B4CF5A863B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreFullHouse", "ScoreFullHouse\ScoreFullHouse.csproj", "{B79908D7-63B2-4F8B-AE24-6518D55D9A86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoreFullHouse", "ScoreFullHouse\ScoreFullHouse.csproj", "{B79908D7-63B2-4F8B-AE24-6518D55D9A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreSmStraight", "ScoreSmStraight\ScoreSmStraight.csproj", "{F4AB8DA3-1072-4973-B655-B597EE17ADBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreLgStraight", "ScoreLgStraight\ScoreLgStraight.csproj", "{4B22ED1B-D15D-4AF3-9FE9-416ACE476895}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{B79908D7-63B2-4F8B-AE24-6518D55D9A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B79908D7-63B2-4F8B-AE24-6518D55D9A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B79908D7-63B2-4F8B-AE24-6518D55D9A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4AB8DA3-1072-4973-B655-B597EE17ADBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4AB8DA3-1072-4973-B655-B597EE17ADBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4AB8DA3-1072-4973-B655-B597EE17ADBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4AB8DA3-1072-4973-B655-B597EE17ADBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B22ED1B-D15D-4AF3-9FE9-416ACE476895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B22ED1B-D15D-4AF3-9FE9-416ACE476895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B22ED1B-D15D-4AF3-9FE9-416ACE476895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B22ED1B-D15D-4AF3-9FE9-416ACE476895}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
