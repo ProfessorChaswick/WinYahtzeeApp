@@ -8,6 +8,8 @@ using ScoreSixes;
 using Score3ofaKind;
 using ScoreChance;
 using ScoreYahtzee;
+using Score4K;
+using ScoreFullHouse;
 using System.Drawing;
 using System.Threading;
 
@@ -380,6 +382,27 @@ namespace WinYahtzee
             scrBtnYzee.Enabled = false;
             if(yZee == 50)
                 NumOfYahtzees++;
+            clearCubes();
+        }
+
+        private void scrBtn4K_Click(object sender, EventArgs e)
+        {
+            int fourOfKind = Score4k.Add4Kind(cubes);
+            lbl4K.Text = fourOfKind.ToString();
+            lblTotalBottom.Text = AddBottom(fourOfKind).ToString();
+            scrBtn4K.BackColor = Color.LightSlateGray;
+            scrBtn4K.Enabled = false;
+            checkYahtzees();
+            clearCubes();
+        }
+
+        private void scrBtnFH_Click(object sender, EventArgs e)
+        {
+            int fullHouse = ScoreFH.AddFH(cubes);
+            lblFH.Text = fullHouse.ToString();
+            lblTotalBottom.Text = AddBottom(fullHouse).ToString();
+            scrBtnFH.BackColor = Color.LightSlateGray;
+            scrBtnFH.Enabled = false;
             clearCubes();
         }
     }

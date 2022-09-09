@@ -11,9 +11,11 @@
   <ItemGroup>
     <ProjectReference Include="..\RollDice\RollDice.csproj" />
     <ProjectReference Include="..\Score3ofaKind\Score3ofaKind.csproj" />
+    <ProjectReference Include="..\Score4K\Score4K.csproj" />
     <ProjectReference Include="..\ScoreChance\ScoreChance.csproj" />
     <ProjectReference Include="..\ScoreFives\ScoreFives.csproj" />
     <ProjectReference Include="..\ScoreFours\ScoreFours.csproj" />
+    <ProjectReference Include="..\ScoreFullHouse\ScoreFullHouse.csproj" />
     <ProjectReference Include="..\ScoreOnes\ScoreOnes.csproj" />
     <ProjectReference Include="..\ScoreSixes\ScoreSixes.csproj" />
     <ProjectReference Include="..\ScoreThrees\ScoreThrees.csproj" />

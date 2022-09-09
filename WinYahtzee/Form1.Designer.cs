@@ -537,6 +537,7 @@
             this.scrBtnFH.Size = new System.Drawing.Size(28, 28);
             this.scrBtnFH.TabIndex = 32;
             this.scrBtnFH.UseVisualStyleBackColor = false;
+            this.scrBtnFH.Click += new System.EventHandler(this.scrBtnFH_Click);
             // 
             // pictureBox5
             // 
@@ -557,6 +558,7 @@
             this.scrBtn4K.Size = new System.Drawing.Size(28, 28);
             this.scrBtn4K.TabIndex = 30;
             this.scrBtn4K.UseVisualStyleBackColor = false;
+            this.scrBtn4K.Click += new System.EventHandler(this.scrBtn4K_Click);
             // 
             // scrBtn3K
             // 
