@@ -306,14 +306,13 @@
             // 
             // lblYahtzeeBonus
             // 
-            this.lblYahtzeeBonus.BackColor = System.Drawing.Color.Gold;
+            this.lblYahtzeeBonus.BackColor = System.Drawing.SystemColors.Control;
             this.lblYahtzeeBonus.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblYahtzeeBonus.ForeColor = System.Drawing.Color.Purple;
             this.lblYahtzeeBonus.Location = new System.Drawing.Point(139, 438);
             this.lblYahtzeeBonus.Name = "lblYahtzeeBonus";
             this.lblYahtzeeBonus.Size = new System.Drawing.Size(45, 28);
             this.lblYahtzeeBonus.TabIndex = 52;
-            this.lblYahtzeeBonus.Text = "100";
             this.lblYahtzeeBonus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblChance

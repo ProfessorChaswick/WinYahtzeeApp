@@ -103,12 +103,12 @@ namespace WinYahtzee
         {
             TotalTop = 0;
             TotalBottom = 0;
-            NumOfRolls = 3; //should start at 3 - 20 is for testing yahtzee
+            NumOfRolls = 9; //should start at 3 - 20 is for testing yahtzee
             NumOfYahtzees = 0;
             lblTotalTop.Text = TotalTop.ToString();
             lblTopBonus.Text = TopBonus.ToString();
             lblTotalBottom.Text = TotalBottom.ToString();
-            lblYahtzeeBonus.Text = YahtzeeBonus.ToString();// foreColor purple::backColor gold
+            //lblYahtzeeBonus.Text = YahtzeeBonus.ToString();// foreColor purple::backColor gold
             lblNumOfRolls.Text = NumOfRolls.ToString();
             showDice[0] = picDi1; //build the pictureBox array to work in loops!
             showDice[1] = picDi2;
@@ -248,7 +248,7 @@ namespace WinYahtzee
             }
             btnRoll.Enabled = true;
             btnRoll.Focus();
-            NumOfRolls = 3;
+            NumOfRolls = 9;
             lblNumOfRolls.Text = NumOfRolls.ToString();
             label1.Text = NumOfYahtzees.ToString(); /////for testing**
             addGT();
@@ -363,7 +363,13 @@ namespace WinYahtzee
         private void countYahtzees()
         {
             if (NumOfYahtzees > 1)
+            {
                 YahtzeeBonus += 100;
+                lblYahtzeeBonus.Text = YahtzeeBonus.ToString();
+                lblYahtzeeBonus.BackColor = Color.Gold;
+            }
+                
+
         }
         private void checkYahtzees()
         {
@@ -405,6 +411,7 @@ namespace WinYahtzee
             lblTotalBottom.Text = AddBottom(fullHouse).ToString();
             scrBtnFH.BackColor = Color.LightSlateGray;
             scrBtnFH.Enabled = false;
+            checkYahtzees();
             clearCubes();
         }
 
@@ -415,6 +422,7 @@ namespace WinYahtzee
             lblTotalBottom.Text = AddBottom(smStr).ToString();
             scrBtnSmStr.BackColor = Color.LightSlateGray;
             scrBtnSmStr.Enabled = false;
+            checkYahtzees();
             clearCubes();
         }
 
@@ -425,6 +433,7 @@ namespace WinYahtzee
             lblTotalBottom.Text= AddBottom(lgStr).ToString();
             scrBtnLgStr.BackColor = Color.LightSlateGray;
             scrBtnLgStr.Enabled = false;
+            checkYahtzees();
             clearCubes();
 
         }
