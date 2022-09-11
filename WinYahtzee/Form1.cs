@@ -288,6 +288,7 @@ namespace WinYahtzee
                 lblGameOver.Text = "Final Score: " + gt.ToString();
                 lblNumOfRolls.Text = "";
                 btnRoll.Enabled = false;
+                btnNew.Visible = true;
             }
 
         }
