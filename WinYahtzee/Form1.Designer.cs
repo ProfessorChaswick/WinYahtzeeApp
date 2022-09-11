@@ -136,6 +136,7 @@
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // picDi5
             // 
@@ -404,6 +405,7 @@
             this.lblTotalTop.Size = new System.Drawing.Size(45, 28);
             this.lblTotalTop.TabIndex = 44;
             this.lblTotalTop.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalTop.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblTotalTop_MouseDoubleClick);
             // 
             // lblTopBonus
             // 

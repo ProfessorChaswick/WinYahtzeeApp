@@ -139,6 +139,19 @@ namespace WinYahtzee
             scoreBox[15] = lblYahtzeeBonus;
             scoreBox[16] = lblTotalBottom;
             scoreBox[17] = lblGT;
+            scoreButton[0] = scrBtnOne;
+            scoreButton[1] = ScrBtnTwo;
+            scoreButton[2] = scrBtnThree;
+            scoreButton[3] = scrBtnFour;
+            scoreButton[4] = scrBtnFive;
+            scoreButton[5] = scrBtnSix;
+            scoreButton[6] = scrBtn3K;
+            scoreButton[7] = scrBtn4K;
+            scoreButton[8] = scrBtnFH;
+            scoreButton[9] = scrBtnSmStr;
+            scoreButton[10] = scrBtnLgStr;
+            scoreButton[11] = scrBtnYzee;
+            scoreButton[12] = scrBtnChance;
 
         }
 
@@ -302,11 +315,18 @@ namespace WinYahtzee
             TotalBottom = 0;
             gt = 0;
             numOfTurns = 13;
-            //Clear a all the score boxes
+            btnRoll.Enabled = true;
+            //Clear a all the score boxes and enable score buttons
             foreach (Control sb in scoreBox)
             {
                 sb.Text = "";
             }
+            foreach(Control sbn in scoreButton)
+            {
+                sbn.Enabled = true;
+                sbn.BackColor = Color.Green;
+            }
+            btnNew.Visible = false;
         }
 
         private void picDi2_Click(object sender, EventArgs e)
@@ -483,5 +503,10 @@ namespace WinYahtzee
 
         }
 
+        private void lblTotalTop_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // A little easter egg to show the "New Game" button
+            btnNew.Visible = true;
+        }
     }
 }
