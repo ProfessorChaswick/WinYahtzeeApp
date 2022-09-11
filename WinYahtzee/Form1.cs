@@ -28,6 +28,7 @@ namespace WinYahtzee
         static int NumOfRolls;
         static int gt = 0;
         static bool allDone = false; // To award top bonus only one time.
+        static int numOfTurns = 13;
 
 
         public Form1()
@@ -37,7 +38,7 @@ namespace WinYahtzee
         }
         //component arrays....
         PictureBox[] showDice = new PictureBox[5]; //so dice pictures work in a loop
-        Button[] scoreButton = new Button[15];
+        Button[] scoreButton = new Button[13];
         Button[] holdButton = new Button[5]; //so I can reset all the hold buttons to green
         Label[] scoreBox = new Label[18]; //so I can set all the score labels to blank.
         Label[] holdBox = new Label[5];
@@ -103,7 +104,7 @@ namespace WinYahtzee
         {
             TotalTop = 0;
             TotalBottom = 0;
-            NumOfRolls = 9; //should start at 3 - 20 is for testing yahtzee
+            NumOfRolls = 3; //should start at 3 - 20 is for testing yahtzee
             NumOfYahtzees = 0;
             lblTotalTop.Text = TotalTop.ToString();
             lblTopBonus.Text = TopBonus.ToString();
@@ -120,6 +121,24 @@ namespace WinYahtzee
             holdBox[2] = lblHeld3;
             holdBox[3] = lblHeld4;
             holdBox[4] = lblHeld5;
+            scoreBox[0] = lblOnes;
+            scoreBox[1] = lblTwos;
+            scoreBox[2] = lblThrees;
+            scoreBox[3] = lblFours;
+            scoreBox[4] = lblFives;
+            scoreBox[5] = lblSixes;
+            scoreBox[6] = lblTopBonus;
+            scoreBox[7] = lblTotalTop;
+            scoreBox[8] = lbl3K;
+            scoreBox[9] = lbl4K;
+            scoreBox[10] = lblFH;
+            scoreBox[11] = lblSmall;
+            scoreBox[12] = lblLarge;
+            scoreBox[13] = lblYahtzee;
+            scoreBox[14] = lblChance;
+            scoreBox[15] = lblYahtzeeBonus;
+            scoreBox[16] = lblTotalBottom;
+            scoreBox[17] = lblGT;
 
         }
 
@@ -248,9 +267,9 @@ namespace WinYahtzee
             }
             btnRoll.Enabled = true;
             btnRoll.Focus();
-            NumOfRolls = 9;
+            NumOfRolls = 3;
             lblNumOfRolls.Text = NumOfRolls.ToString();
-            label1.Text = NumOfYahtzees.ToString(); /////for testing**
+            //label1.Text = NumOfYahtzees.ToString(); /////for testing**
             addGT();
             lblGT.Text = gt.ToString();
             if (TopBonus == 35)
@@ -261,7 +280,32 @@ namespace WinYahtzee
                 lblBonusAnnounce.Text += announce.ToString();
                 lblBonusAnnounce.Visible = true;
             }
+            numOfTurns--;
+            label1.Text = numOfTurns.ToString();
+            if(numOfTurns == 0)
+            {
+                lblGameOver.Visible = true;
+                lblGameOver.Text = "Final Score: " + gt.ToString();
+                lblNumOfRolls.Text = "";
+                btnRoll.Enabled = false;
+            }
 
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            lblGameOver.Visible = false;
+            lblNumOfRolls.Text = NumOfRolls.ToString();
+            lblBonusAnnounce.Text = "";
+            TotalTop = 0;
+            TotalBottom = 0;
+            gt = 0;
+            numOfTurns = 13;
+            //Clear a all the score boxes
+            foreach (Control sb in scoreBox)
+            {
+                sb.Text = "";
+            }
         }
 
         private void picDi2_Click(object sender, EventArgs e)
@@ -437,5 +481,6 @@ namespace WinYahtzee
             clearCubes();
 
         }
+
     }
 }

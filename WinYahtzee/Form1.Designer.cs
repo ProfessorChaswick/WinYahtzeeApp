@@ -99,7 +99,9 @@
             this.lblHeld3 = new System.Windows.Forms.Label();
             this.lblHeld4 = new System.Windows.Forms.Label();
             this.lblHeld5 = new System.Windows.Forms.Label();
+            this.lblGameOver = new System.Windows.Forms.Label();
             this.lblBonusAnnounce = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDi5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDi2)).BeginInit();
@@ -983,6 +985,19 @@
             this.lblHeld5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeld5.Visible = false;
             // 
+            // lblGameOver
+            // 
+            this.lblGameOver.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblGameOver.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGameOver.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblGameOver.Location = new System.Drawing.Point(246, 80);
+            this.lblGameOver.Name = "lblGameOver";
+            this.lblGameOver.Size = new System.Drawing.Size(133, 20);
+            this.lblGameOver.TabIndex = 16;
+            this.lblGameOver.Text = "Final Score 888";
+            this.lblGameOver.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblGameOver.Visible = false;
+            // 
             // lblBonusAnnounce
             // 
             this.lblBonusAnnounce.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -994,12 +1009,29 @@
             this.lblBonusAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBonusAnnounce.Visible = false;
             // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNew.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNew.Location = new System.Drawing.Point(293, 18);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(94, 30);
+            this.btnNew.TabIndex = 17;
+            this.btnNew.Text = "New Game";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Visible = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(421, 557);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblBonusAnnounce);
             this.Controls.Add(this.lblHeld5);
             this.Controls.Add(this.lblHeld4);
@@ -1110,6 +1142,8 @@
         private Label lblHeld3;
         private Label lblHeld4;
         private Label lblHeld5;
+        private Label lblGameOver;
         private Label lblBonusAnnounce;
+        private Button btnNew;
     }
 }
