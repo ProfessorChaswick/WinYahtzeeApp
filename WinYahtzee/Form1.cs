@@ -280,7 +280,6 @@ namespace WinYahtzee
             }
             btnRoll.Enabled = true;
             btnRoll.Focus();
-            NumOfRolls = 3;
             lblNumOfRolls.Text = NumOfRolls.ToString();
             //label1.Text = NumOfYahtzees.ToString(); /////for testing**
             addGT();
