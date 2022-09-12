@@ -39,7 +39,7 @@ namespace WinYahtzee
         //component arrays....
         PictureBox[] showDice = new PictureBox[5]; //so dice pictures work in a loop
         Button[] scoreButton = new Button[13];
-        Button[] holdButton = new Button[5]; //so I can reset all the hold buttons to green
+        //Button[] holdButton = new Button[5]; //so I can reset all the hold buttons to green
         Label[] scoreBox = new Label[18]; //so I can set all the score labels to blank.
         Label[] holdBox = new Label[5];
 
@@ -309,22 +309,38 @@ namespace WinYahtzee
         private void btnNew_Click(object sender, EventArgs e)
         {
             lblGameOver.Visible = false;
-            lblNumOfRolls.Text = NumOfRolls.ToString();
             lblBonusAnnounce.Text = "";
             TotalTop = 0;
+            lblTotalTop.Text = TotalTop.ToString();
             TotalBottom = 0;
+            lblTotalBottom.Text = TotalBottom.ToString();
+            TopBonus = 0;
+            lblTopBonus.Text = TopBonus.ToString();
             gt = 0;
+            lblGT.Text = gt.ToString();
             numOfTurns = 13;
+            NumOfRolls = 3;
+            lblNumOfRolls.Text = NumOfRolls.ToString();
+            NumOfYahtzees = 0;
             btnRoll.Enabled = true;
             //Clear a all the score boxes and enable score buttons
-            foreach (Control sb in scoreBox)
+            foreach (Label sb in scoreBox)
             {
                 sb.Text = "";
             }
-            foreach(Control sbn in scoreButton)
+            foreach(Button sbn in scoreButton)
             {
                 sbn.Enabled = true;
                 sbn.BackColor = Color.Green;
+            }
+            foreach(PictureBox shDi in showDice)
+            {
+                shDi.Image = Resource1.blank;
+                shDi.BackColor = Color.Green;
+            }
+            foreach(Label hb in holdBox)
+            {
+                hb.Visible = false;
             }
             btnNew.Visible = false;
         }
