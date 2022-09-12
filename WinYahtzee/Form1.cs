@@ -24,7 +24,7 @@ namespace WinYahtzee
         static int TotalBottom = 0;
         static int TopBonus = 0;
         static int YahtzeeBonus = 0;
-        static int NumOfYahtzees;
+        static bool AnyYahtzees;
         static int NumOfRolls;
         static int gt = 0;
         static bool allDone = false; // To award top bonus only one time.
@@ -105,7 +105,7 @@ namespace WinYahtzee
             TotalTop = 0;
             TotalBottom = 0;
             NumOfRolls = 3; //should start at 3 - 20 is for testing yahtzee
-            NumOfYahtzees = 0;
+            AnyYahtzees = false;
             lblTotalTop.Text = TotalTop.ToString();
             lblTopBonus.Text = TopBonus.ToString();
             lblTotalBottom.Text = TotalBottom.ToString();
@@ -311,17 +311,13 @@ namespace WinYahtzee
             lblGameOver.Visible = false;
             lblBonusAnnounce.Text = "";
             TotalTop = 0;
-            lblTotalTop.Text = TotalTop.ToString();
             TotalBottom = 0;
-            lblTotalBottom.Text = TotalBottom.ToString();
             TopBonus = 0;
-            lblTopBonus.Text = TopBonus.ToString();
             gt = 0;
-            lblGT.Text = gt.ToString();
             numOfTurns = 13;
             NumOfRolls = 3;
             lblNumOfRolls.Text = NumOfRolls.ToString();
-            NumOfYahtzees = 0;
+            AnyYahtzees = false;
             btnRoll.Enabled = true;
             //Clear a all the score boxes and enable score buttons
             foreach (Label sb in scoreBox)
@@ -342,6 +338,10 @@ namespace WinYahtzee
             {
                 hb.Visible = false;
             }
+            lblTotalTop.Text = TotalTop.ToString();
+            lblTotalBottom.Text = TotalBottom.ToString();
+            lblGT.Text = gt.ToString();
+            allDone = false;
             btnNew.Visible = false;
         }
 
@@ -443,7 +443,7 @@ namespace WinYahtzee
         }
         private void countYahtzees()
         {
-            if (NumOfYahtzees > 1)
+            if (AnyYahtzees)
             {
                 YahtzeeBonus += 100;
                 lblYahtzeeBonus.Text = YahtzeeBonus.ToString();
@@ -456,7 +456,7 @@ namespace WinYahtzee
         {
             if (cubes[0] == cubes[1] && cubes[1] == cubes[2] && cubes[2] == cubes[3] && cubes[3] == cubes[4])
             {
-                NumOfYahtzees++;
+                //NumOfYahtzees++;
                 countYahtzees();
 
             }
@@ -470,7 +470,7 @@ namespace WinYahtzee
             scrBtnYzee.BackColor = Color.LightSlateGray;
             scrBtnYzee.Enabled = false;
             if(yZee == 50)
-                NumOfYahtzees++;
+                AnyYahtzees = true;
             clearCubes();
         }
 
