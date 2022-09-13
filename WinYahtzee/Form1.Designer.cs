@@ -309,7 +309,7 @@
             // 
             // lblYahtzeeBonus
             // 
-            this.lblYahtzeeBonus.BackColor = System.Drawing.SystemColors.Control;
+            this.lblYahtzeeBonus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblYahtzeeBonus.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblYahtzeeBonus.ForeColor = System.Drawing.Color.Purple;
             this.lblYahtzeeBonus.Location = new System.Drawing.Point(139, 438);
