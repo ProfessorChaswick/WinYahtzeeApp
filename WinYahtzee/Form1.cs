@@ -104,7 +104,7 @@ namespace WinYahtzee
         {
             TotalTop = 0;
             TotalBottom = 0;
-            NumOfRolls = 9; //should start at 3 - 20 is for testing yahtzee
+            NumOfRolls = 3; //should start at 3 - 20 is for testing yahtzee
             AnyYahtzees = false;
             lblTotalTop.Text = TotalTop.ToString();
             lblTopBonus.Text = TopBonus.ToString();
@@ -270,7 +270,7 @@ namespace WinYahtzee
         }
         private void clearCubes()
         {
-            NumOfRolls = 9;
+            NumOfRolls = 3;
             for (int i = 0; i <= 4; i++)
             {
                 showDice[i].Image = Resource1.blank;
@@ -315,7 +315,7 @@ namespace WinYahtzee
             YahtzeeBonus = 0;
             gt = 0;
             numOfTurns = 13;
-            NumOfRolls = 9;
+            NumOfRolls = 3;
             lblNumOfRolls.Text = NumOfRolls.ToString();
             AnyYahtzees = false;
             btnRoll.Enabled = true;
