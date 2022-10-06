@@ -3,3 +3,4 @@ This will be a non-commercial Windows application of the world famous Yahtzee ga
 It's purpose is to hone my C# and GitHub skills.
 
 I need to redo the yahtzee bonus check in order to check for extra yahtzee after each roll.
+The above revision is complete.  Break it if you can.
