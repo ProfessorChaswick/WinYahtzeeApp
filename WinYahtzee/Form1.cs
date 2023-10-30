@@ -34,7 +34,7 @@ namespace WinYahtzee
         public Form1()
         {
             InitializeComponent();
-            
+
         }
         //component arrays....
         PictureBox[] showDice = new PictureBox[5]; //so dice pictures work in a loop
@@ -46,7 +46,7 @@ namespace WinYahtzee
 
         private async void btnRoll_Click(object sender, EventArgs e)
         {
-            
+
 
             //label1.Text = cubes[0].ToString();
 
@@ -85,14 +85,14 @@ namespace WinYahtzee
             }
             NumOfRolls--;
             lblNumOfRolls.Text = NumOfRolls.ToString();
-            if(NumOfRolls == 0)
+            if (NumOfRolls == 0)
             {
                 btnRoll.Enabled = false;
                 panel1.Focus();
             }
             // temp bits for testing
             int rollTotal = 0;
-            foreach(int c in cubes)
+            foreach (int c in cubes)
             {
                 rollTotal += c;
             }
@@ -104,7 +104,7 @@ namespace WinYahtzee
         {
             TotalTop = 0;
             TotalBottom = 0;
-            NumOfRolls = 3; //should start at 3 - 20 is for testing yahtzee
+            NumOfRolls = 17; //should start at 3 - 20 is for testing yahtzee
             AnyYahtzees = false;
             lblTotalTop.Text = TotalTop.ToString();
             lblTopBonus.Text = TopBonus.ToString();
@@ -164,7 +164,7 @@ namespace WinYahtzee
         private async void picDi1_MouseLeave(object sender, EventArgs e)
         {
             await Task.Delay(250);
-            lblHoverTip.Visible=false;
+            lblHoverTip.Visible = false;
         }
 
         private void scrBtnOne_Click(object sender, EventArgs e)
@@ -191,10 +191,10 @@ namespace WinYahtzee
             clearCubes();
         }
         public static int AddTop(int dots)
-            {
-                TotalTop += dots;
-                return TotalTop;
-            }
+        {
+            TotalTop += dots;
+            return TotalTop;
+        }
         public static int AddBottom(int dots)
         {
             TotalBottom += dots;
@@ -260,17 +260,18 @@ namespace WinYahtzee
                 lblHeld1.Visible = false;
                 picDi1.BackColor = Color.Green;
                 lblHoverTip.Text = "Click to Hold";
-            }else
+            }
+            else
             {
                 lblHeld1.Visible = true;
                 picDi1.BackColor = Color.Red;
                 lblHoverTip.Text = "Click to release";
             }
-                
+
         }
         private void clearCubes()
         {
-            NumOfRolls = 3;
+            NumOfRolls = 17;
             for (int i = 0; i <= 4; i++)
             {
                 showDice[i].Image = Resource1.blank;
@@ -294,7 +295,7 @@ namespace WinYahtzee
             }
             numOfTurns--;
             label1.Text = numOfTurns.ToString();
-            if(numOfTurns == 0)
+            if (numOfTurns == 0)
             {
                 lblGameOver.Visible = true;
                 lblGameOver.Text = "Final Score: " + gt.ToString();
@@ -315,7 +316,7 @@ namespace WinYahtzee
             YahtzeeBonus = 0;
             gt = 0;
             numOfTurns = 13;
-            NumOfRolls = 3;
+            NumOfRolls = 17;
             lblNumOfRolls.Text = NumOfRolls.ToString();
             AnyYahtzees = false;
             btnRoll.Enabled = true;
@@ -324,17 +325,17 @@ namespace WinYahtzee
             {
                 sb.Text = "";
             }
-            foreach(Button sbn in scoreButton)
+            foreach (Button sbn in scoreButton)
             {
                 sbn.Enabled = true;
                 sbn.BackColor = Color.Green;
             }
-            foreach(PictureBox shDi in showDice)
+            foreach (PictureBox shDi in showDice)
             {
                 shDi.Image = Resource1.blank;
                 shDi.BackColor = Color.Green;
             }
-            foreach(Label hb in holdBox)
+            foreach (Label hb in holdBox)
             {
                 hb.Visible = false;
             }
@@ -354,7 +355,8 @@ namespace WinYahtzee
                 lblHeld2.Visible = false;
                 picDi2.BackColor = Color.Green;
                 lblHoverTip.Text = "Click to Hold";
-            }else
+            }
+            else
             {
                 lblHeld2.Visible = true;
                 picDi2.BackColor = Color.Red;
@@ -451,7 +453,7 @@ namespace WinYahtzee
                 lblYahtzeeBonus.Text = YahtzeeBonus.ToString();
                 lblYahtzeeBonus.BackColor = Color.Gold;
             }
-                
+
 
         }
         private void checkYahtzees()
@@ -471,7 +473,7 @@ namespace WinYahtzee
             lblTotalBottom.Text = AddBottom(yZee).ToString();
             scrBtnYzee.BackColor = Color.LightSlateGray;
             scrBtnYzee.Enabled = false;
-            if(yZee == 50)
+            if (yZee == 50)
                 AnyYahtzees = true;
             clearCubes();
         }
@@ -489,18 +491,35 @@ namespace WinYahtzee
 
         private void scrBtnFH_Click(object sender, EventArgs e)
         {
-            int fullHouse = ScoreFH.AddFH(cubes);
+            int fullHouse = 0;
+            if (AnyYahtzees == true)
+            {
+                fullHouse = 25;
+            }
+            else
+            {
+                fullHouse = ScoreFH.AddFH(cubes);
+            }
+
             lblFH.Text = fullHouse.ToString();
             lblTotalBottom.Text = AddBottom(fullHouse).ToString();
             scrBtnFH.BackColor = Color.LightSlateGray;
             scrBtnFH.Enabled = false;
             checkYahtzees();
             clearCubes();
-        }
+        }   //I must rething these conditions for granting scores with bonus yahtzees
 
         private void scrBtnSmStr_Click(object sender, EventArgs e)
         {
-            int smStr = SmStr.Small(cubes);
+            int smStr = 0;
+            if (AnyYahtzees == true)
+            {
+                smStr = 30;
+            }
+            else
+            {
+                smStr = SmStr.Small(cubes);
+            }
             lblSmall.Text = smStr.ToString();
             lblTotalBottom.Text = AddBottom(smStr).ToString();
             scrBtnSmStr.BackColor = Color.LightSlateGray;
@@ -511,9 +530,18 @@ namespace WinYahtzee
 
         private void scrBtnLgStr_Click(object sender, EventArgs e)
         {
-            int lgStr = LgStr.Large(cubes);
+            int lgStr = 0;
+            if (AnyYahtzees == true)
+            {
+                lgStr = 40;
+            }
+            else
+            {
+                lgStr = LgStr.Large(cubes);
+            }
+
             lblLarge.Text = lgStr.ToString();
-            lblTotalBottom.Text= AddBottom(lgStr).ToString();
+            lblTotalBottom.Text = AddBottom(lgStr).ToString();
             scrBtnLgStr.BackColor = Color.LightSlateGray;
             scrBtnLgStr.Enabled = false;
             checkYahtzees();

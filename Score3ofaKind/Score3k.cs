@@ -32,9 +32,10 @@ public class Score3k
         if(ones > 2 || twos > 2 || threes > 2 ||
             fours > 2 || fives > 2 || sixes > 2)
         {
-            for(int dot = 0; dot < 5; dot++)
+            for (int dot = 0; dot < 5; dot++)
                 threeKind += dots[dot];
-        }else
+        }
+        else
             threeKind = 0;
 
         return threeKind;
