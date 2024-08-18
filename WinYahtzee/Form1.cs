@@ -456,14 +456,15 @@ namespace WinYahtzee
 
 
         }
-        private void checkYahtzees()
+        private bool checkYahtzees()
         {
             if (cubes[0] == cubes[1] && cubes[1] == cubes[2] && cubes[2] == cubes[3] && cubes[3] == cubes[4])
             {
                 //NumOfYahtzees++;
                 countYahtzees();
-
+                return true;
             }
+            return false;
         }
 
         private void scrBtnYzee_Click(object sender, EventArgs e)
@@ -492,7 +493,7 @@ namespace WinYahtzee
         private void scrBtnFH_Click(object sender, EventArgs e)
         {
             int fullHouse = 0;
-            if (AnyYahtzees == true)
+            if (AnyYahtzees == true && checkYahtzees() == true)
             {
                 fullHouse = 25;
             }
@@ -512,7 +513,7 @@ namespace WinYahtzee
         private void scrBtnSmStr_Click(object sender, EventArgs e)
         {
             int smStr = 0;
-            if (AnyYahtzees == true)
+            if (AnyYahtzees == true && checkYahtzees() == true)
             {
                 smStr = 30;
             }
@@ -531,7 +532,7 @@ namespace WinYahtzee
         private void scrBtnLgStr_Click(object sender, EventArgs e)
         {
             int lgStr = 0;
-            if (AnyYahtzees == true)
+            if (AnyYahtzees == true && checkYahtzees() == true)
             {
                 lgStr = 40;
             }
